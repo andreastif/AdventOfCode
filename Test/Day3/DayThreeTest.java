@@ -38,7 +38,6 @@ class DayThreeTest {
                 //substring range: inclusive - exclusive
                 String compartmentOne = ex.substring(0, ex.length()/2);
                 String compartmentTwo = ex.substring(ex.length()/2);
-
                 //find common content - OK
                 String foundCharacter = "";
                 for (int i=0; i<compartmentOne.length();i++) {
@@ -76,7 +75,6 @@ class DayThreeTest {
                 //substring range: inclusive - exclusive
                 String compartmentOne = ex.substring(0, ex.length()/2);
                 String compartmentTwo = ex.substring(ex.length()/2);
-
                 //find common content - OK
                 String foundCharacter = "";
                 for (int i=0; i<compartmentOne.length();i++) {

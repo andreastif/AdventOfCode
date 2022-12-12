@@ -3,7 +3,7 @@
         //                myList.stream()
         //                .filter(e -> !e.isBlank())
         //                .map(e -> Long.parseLong(e))
-        //                .reduce(0L, (a, b) -> a + b)
+        //                .reduce(0L, (a, b) -> a + b);
 
         //  sparar en lista som BARA innehåller talen (rensat ut blank)
         //                 myList.stream()
@@ -24,4 +24,4 @@
         //                            Codeblock to execute for ex
         //                              return val;
         //                                  }
-        //                              }
+        //                              }).reduce(0, (a,b) -> a + b);

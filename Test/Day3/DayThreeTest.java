@@ -101,13 +101,7 @@ class DayThreeTest {
                     }
                 }
                 //lookup value in prop - OK
-                int returnValue;
-                if (charsLC.contains(foundCharacter)) {
-                    returnValue = integerArray.get(charsLC.indexOf(foundCharacter));
-                } else {
-                    returnValue = integerArrayTwo.get(charsUC.indexOf(foundCharacter));
-                }
-                return returnValue;
+                return charsLC.contains(foundCharacter) ? integerArray.get(charsLC.indexOf(foundCharacter)) : integerArrayTwo.get(charsUC.indexOf(foundCharacter));
             };
             return evalContents.apply(e);
         }).reduce(0, Integer::sum));

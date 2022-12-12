@@ -25,18 +25,15 @@ class DayThreeTest {
         assertEquals(157,list.stream().map(e -> {
             Function<String, Integer> evalContents = ex -> {
                 //Defining two arrays for evaluating sum
-                    //Character Arrays
-                    List<String> charsLC = new ArrayList<>(List.of("a", "b", "c", "d" ,"e", "f", "g", "h", "i", "j", "k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"));
-                    List<String> charsUC = charsLC.stream().map(String::toUpperCase).toList();
-                    //List of Integers
-                    List<Integer> integerArray = new ArrayList<>();
-                    for (int i=1; i<27; i++) {
-                        integerArray.add(i);
-                    }
-                    List<Integer> integerArrayTwo = new ArrayList<>();
-                    for (int i=27; i<53; i++) {
-                        integerArrayTwo.add(i);
-                    }
+                //Character Arrays
+                List<String> chars = new ArrayList<>(List.of(
+                        "a", "b", "c", "d" ,"e", "f", "g", "h", "i", "j", "k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z",
+                        "A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"));
+                //List of Integers
+                List<Integer> integerArray = new ArrayList<>();
+                for (int i=1; i<53; i++) {
+                    integerArray.add(i);
+                }
                 //split string into two - OK
                 //substring range: inclusive - exclusive
                 String compartmentOne = ex.substring(0, ex.length()/2);
@@ -54,13 +51,7 @@ class DayThreeTest {
                     }
                 }
                 //lookup value in prop - OK
-                int returnValue;
-                if (charsLC.contains(foundCharacter)) {
-                    returnValue = integerArray.get(charsLC.indexOf(foundCharacter));
-                } else {
-                    returnValue = integerArrayTwo.get(charsUC.indexOf(foundCharacter));
-                }
-                return returnValue;
+                return chars.contains(foundCharacter) ? integerArray.get(chars.indexOf(foundCharacter)): null ;
             };
             return evalContents.apply(e);
         }).reduce(0, Integer::sum));
@@ -73,16 +64,13 @@ class DayThreeTest {
             Function<String, Integer> evalContents = ex -> {
                 //Defining two arrays for evaluating sum
                 //Character Arrays
-                List<String> charsLC = new ArrayList<>(List.of("a", "b", "c", "d" ,"e", "f", "g", "h", "i", "j", "k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"));
-                List<String> charsUC = charsLC.stream().map(String::toUpperCase).toList();
+                List<String> chars = new ArrayList<>(List.of(
+                        "a", "b", "c", "d" ,"e", "f", "g", "h", "i", "j", "k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z",
+                        "A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"));
                 //List of Integers
                 List<Integer> integerArray = new ArrayList<>();
-                for (int i=1; i<27; i++) {
+                for (int i=1; i<53; i++) {
                     integerArray.add(i);
-                }
-                List<Integer> integerArrayTwo = new ArrayList<>();
-                for (int i=27; i<53; i++) {
-                    integerArrayTwo.add(i);
                 }
                 //split string into two - OK
                 //substring range: inclusive - exclusive
@@ -101,11 +89,9 @@ class DayThreeTest {
                     }
                 }
                 //lookup value in prop - OK
-                return charsLC.contains(foundCharacter) ? integerArray.get(charsLC.indexOf(foundCharacter)) : integerArrayTwo.get(charsUC.indexOf(foundCharacter));
+                return chars.contains(foundCharacter) ? integerArray.get(chars.indexOf(foundCharacter)): null;
             };
             return evalContents.apply(e);
         }).reduce(0, Integer::sum));
-
     }
-
 }

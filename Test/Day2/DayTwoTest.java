@@ -25,7 +25,7 @@ class DayTwoTest {
     void totalPointsTest() throws FileNotFoundException {
         List<String> list = readFromFile.getInput("src/Day2/day-2-test.txt");
 
-        System.out.println(list.stream().map(e -> {
+        assertEquals(15,list.stream().map(e -> {
             Function<String, Integer> evaluateGame = ex -> {
                 int playerPoints = 0;
                 char opponent = ex.charAt(0);

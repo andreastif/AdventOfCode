@@ -6,14 +6,22 @@
         //                .reduce(0L, (a, b) -> a + b)
 
         //  sparar en lista som BARA innehåller talen (rensat ut blank)
-        //        myList.stream()
+        //                 myList.stream()
         //                .filter(e -> !e.isBlank())
         //                .map(e -> Long.parseLong(e))
         //                .toList()
 
         //  .map betyder för varje element, utför funktionen som anges.
-        //        List<Integer> anotherList = strings.stream()
-        //                .map(e -> Arrays.stream(e.split("^0$"))
+        //                         List<Integer> anotherList = strings.stream()
+        //                        .map(e -> Arrays.stream(e.split("^0$"))
         //                        .filter(s -> !s.isEmpty())
         //                        .mapToInt(Integer::parseInt)
         //                        .sum()).toList();
+
+        // anropa egengjorda funktioner för varje element genom följande
+        //              .map(e -> { Function<Type IN, Type FROM> funcName = ex ->
+        //                          {
+        //                            Codeblock to execute for ex
+        //                              return val;
+        //                                  }
+        //                              }

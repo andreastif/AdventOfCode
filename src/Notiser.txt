@@ -1,0 +1,19 @@
+//Lärdomar:
+        //  får listan att summera till EN total
+        //                myList.stream()
+        //                .filter(e -> !e.isBlank())
+        //                .map(e -> Long.parseLong(e))
+        //                .reduce(0L, (a, b) -> a + b)
+
+        //  sparar en lista som BARA innehåller talen (rensat ut blank)
+        //        myList.stream()
+        //                .filter(e -> !e.isBlank())
+        //                .map(e -> Long.parseLong(e))
+        //                .toList()
+
+        //  .map betyder för varje element, utför funktionen som anges.
+        //        List<Integer> anotherList = strings.stream()
+        //                .map(e -> Arrays.stream(e.split("^0$"))
+        //                        .filter(s -> !s.isEmpty())
+        //                        .mapToInt(Integer::parseInt)
+        //                        .sum()).toList();

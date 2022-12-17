@@ -52,3 +52,9 @@
         //                              "^(\\d+-\\d+),(\\d+-\\d+)";
         //      <<allt på denna sida är grupp 1>>   ','    <<allt på denna sida är grupp 2>>
         //
+
+        //  Consumer används när du inte vill returnera ett värde från en funktion (jmfr void)
+        //          Consumer<String> moveCrate = instruction -> { ...do smth...}
+
+        //  peek används istället för map när du vill manipulera t.ex element i strömmen utan att returnera ngt värde från strömmen
+        //          list.stream().peek(e -> { ...do smth...} // denna kodrad agerar på e utan att kräva ett return statement.

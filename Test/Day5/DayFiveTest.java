@@ -154,6 +154,8 @@ class DayFiveTest {
         List<String> eight = new ArrayList<>(List.of("N", "D", "S"));
         List<String> nine = new ArrayList<>(List.of("D", "Z", "S", "F", "M"));
         List<List<String>> stacks = new ArrayList<>(List.of(one, two, three, four, five, six, seven, eight, nine));
+
+
         list.stream().peek(e -> {
             Consumer<String> moveCrate = instruction -> {
                 Pattern pattern = Pattern.compile("\\bmove\\s+(\\d+)\\s+from\\s+(\\d+)\\s+to\\s+(\\d+)\\b");

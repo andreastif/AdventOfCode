@@ -29,12 +29,6 @@ class DayThreeTest {
                 List<String> chars = new ArrayList<>(List.of(
                         "a", "b", "c", "d" ,"e", "f", "g", "h", "i", "j", "k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z",
                         "A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"));
-                //List of Integers
-                List<Integer> integerArray = new ArrayList<>();
-                for (int i=1; i<53; i++) {
-                    integerArray.add(i);
-                }
-                //split string into two - OK
                 //substring range: inclusive - exclusive
                 String compartmentOne = ex.substring(0, ex.length()/2);
                 String compartmentTwo = ex.substring(ex.length()/2);
@@ -50,7 +44,7 @@ class DayThreeTest {
                     }
                 }
                 //lookup value in prop - OK
-                return chars.contains(foundCharacter) ? integerArray.get(chars.indexOf(foundCharacter)): null ;
+                return chars.contains(foundCharacter) ? chars.indexOf(foundCharacter)+1: null ;
             };
             return evalContents.apply(e);
         }).reduce(0, Integer::sum));
@@ -66,11 +60,6 @@ class DayThreeTest {
                 List<String> chars = new ArrayList<>(List.of(
                         "a", "b", "c", "d" ,"e", "f", "g", "h", "i", "j", "k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z",
                         "A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"));
-                //List of Integers
-                List<Integer> integerArray = new ArrayList<>();
-                for (int i=1; i<53; i++) {
-                    integerArray.add(i);
-                }
                 //split string into two - OK
                 //substring range: inclusive - exclusive
                 String compartmentOne = ex.substring(0, ex.length()/2);
@@ -87,7 +76,7 @@ class DayThreeTest {
                     }
                 }
                 //lookup value in prop - OK
-                return chars.contains(foundCharacter) ? integerArray.get(chars.indexOf(foundCharacter)): null;
+                return chars.contains(foundCharacter) ? chars.indexOf(foundCharacter)+1: null ;
             };
             return evalContents.apply(e);
         }).reduce(0, Integer::sum));

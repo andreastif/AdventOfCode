@@ -35,3 +35,20 @@
         //                      }
         //                  }
         //              }
+
+        //  Regex är användbart för att hitta grupperingar (day4-part1)
+        //      String regEx = "^(\\d+-\\d+),(\\d+-\\d+)"; //Strängen som skall matchas
+        //      Pattern pattern = Pattern.compile(regEx); //måste matas in i en pattern compiler
+        //      Matcher matcher = pattern.matcher(stringFromList); // pattern anropas när matcher nyas upp och tar emot strängen som skall kollas av
+        //
+        //      String firstGroup = null, secondGroup = null; //strängarna som skall lagra grupperingarna
+        //
+        //      if (matcher.find()) {                       //anropar find(), om true
+        //              firstGroup = matcher.group(1);      //tar grupp 1 och lagrar i string
+        //              secondGroup = matcher.group(2);     //tar grupp 2 och lagrar i string
+        //          }
+        //
+        //      Group fungerar genom att matcha grupp 1 och 2 genom kommatecknet i regexuttrycket:
+        //                              "^(\\d+-\\d+),(\\d+-\\d+)";
+        //      <<allt på denna sida är grupp 1>>   ','    <<allt på denna sida är grupp 2>>
+        //

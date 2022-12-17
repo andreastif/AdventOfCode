@@ -158,7 +158,7 @@ class DayFiveTest {
             Consumer<String> moveCrate = instruction -> {
                 Pattern pattern = Pattern.compile("\\bmove\\s+(\\d+)\\s+from\\s+(\\d+)\\s+to\\s+(\\d+)\\b");
                 Matcher matcher = pattern.matcher(instruction);
-                Integer moveAmount = null, fromStack = null, toStack = null;
+                Integer moveAmount = 1, fromStack = 2, toStack = 3;
                 if (matcher.find()) {
                     moveAmount = Integer.parseInt(matcher.group(1));
                     fromStack = Integer.parseInt(matcher.group(2)) - 1;

@@ -5,11 +5,8 @@ import org.junit.jupiter.api.Test;
 
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
-import java.util.Map;
 import java.util.function.Function;
-import java.util.stream.Collectors;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -18,7 +15,7 @@ class DayThreeTest {
     @Test
     void checkInput() throws FileNotFoundException {
         List<String> list = readFromFile.getInput("src/Day3/day-3-test.txt");
-        System.out.println(list);
+        assertEquals(6, list.size());
     }
 
     @Test

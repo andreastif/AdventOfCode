@@ -20,7 +20,7 @@ class DaySevenTest {
     }
 
     @Test
-    void directorySizesActual() throws FileNotFoundException {
+    void directorySizesActualPartOne() throws FileNotFoundException {
         List<String> list = readFromFile.getInput("src/Day7/day-7-actual.txt");
 
         Map<String, Integer> directoryMap = new HashMap<>();

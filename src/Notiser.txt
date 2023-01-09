@@ -63,3 +63,7 @@
         //      thisFuncExecutesFirst.andThen(thisFuncExecutesLast) tillåter oss att länka funktioner på varandra för att skapa ett större sammanhängande system.
         //      compose gör samma sak som .andthen() med skillnaden att den exekverar funktionerna i bakvänd ordning
         //      thisFuncExecutesLast.compose(thisFuncExecutesFirst);
+
+        //  Memoization
+        //      A function is executed IF the variable has not been passed to the function previously
+        //      if not, executes the function. Requires a 'cache' (e.g. a list with stored values and the corresponding variable)
